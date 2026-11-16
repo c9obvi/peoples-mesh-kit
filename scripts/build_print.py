@@ -12,6 +12,7 @@ import sys
 import markdown
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+REPO_URL = "https://github.com/c9obvi/peoples-mesh-kit/blob/main/"
 
 CSS = """
 @page { size: Letter; margin: 0.6in 0.6in 0.7in; }
@@ -58,6 +59,18 @@ def inline_images(html, base_dir):
     return re.sub(r'src="([^"]+)"', repl, html)
 
 
+def link_to_repo(html, base_dir):
+    """Point relative links at GitHub so PDFs never embed local file paths."""
+    def repl(m):
+        href = m.group(1)
+        if re.match(r"^([a-z]+:|#)", href):
+            return m.group(0)
+        path, _, frag = href.partition("#")
+        rel = os.path.relpath(os.path.normpath(os.path.join(base_dir, path)), ROOT)
+        return f'href="{REPO_URL}{rel}{"#" + frag if frag else ""}"'
+    return re.sub(r'href="([^"]+)"', repl, html)
+
+
 def render(md_paths, title, plain=False):
     parts = []
     for i, rel in enumerate(md_paths):
@@ -67,6 +80,7 @@ def render(md_paths, title, plain=False):
         text = re.sub(r"^- \[x\] ", "- ☑ ", text, flags=re.M)
         body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists", "toc"])
         body = re.sub(r"<img[^>]*>", "", body) if plain else inline_images(body, os.path.dirname(path))
+        body = link_to_repo(body, os.path.dirname(path))
         parts.append(('<div class="page-break"></div>' if i else "") + body)
     extra = PLAIN_CSS if plain else ""
     return f"<!doctype html><html><head><meta charset='utf-8'><title>{title}</title><style>{CSS}{extra}</style></head><body>{''.join(parts)}</body></html>"
