@@ -3,3 +3,8 @@
 *.zip binary
 *.jpg binary
 *.pdf binary
+offline-flasher/config-site/** -whitespace
+sources/meshcore-docs/** -whitespace
+sources/printables/** -whitespace
+sources/store/** -whitespace
+sources/youtube/** -whitespace

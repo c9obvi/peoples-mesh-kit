@@ -4,3 +4,7 @@ dist/
 __pycache__/
 *.pyc
 sources/transcripts/
+
+# Rebuilt locally by scripts/update_offline_flasher.py (see offline-flasher/README.md)
+offline-extras/
+offline-flasher/site/

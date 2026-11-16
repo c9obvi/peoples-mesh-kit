@@ -1,44 +1,56 @@
 # Firmware (offline copy)
 
-Official **MeshCore v1.18.0** builds for **Seeed Studio XIAO nRF52840 + Wio-SX1262** (flasher name: "Seeed Studio Xiao nRF52 WIO"), downloaded 2026-11-14 from the [MeshCore releases](https://github.com/meshcore-dev/MeshCore/releases) (`companion-v1.18.0`, `repeater-v1.18.0`, published 2026-10-15). The bootloader and erase utilities come from <https://flasher.meshcore.io/firmware/>. MeshCore is MIT-licensed. Checksums: `meshcore-v1.18.0/SHA256SUMS`.
+**MeshCore v1.18.0**, the latest stable release (published 2026-10-15, checked 2026-11-15), for every board in [docs/hardware-options.md](../docs/hardware-options.md). The files come from the [MeshCore releases](https://github.com/meshcore-dev/MeshCore/releases) via flasher.meshcore.io. MeshCore is MIT-licensed. Each folder has a `SHA256SUMS` file. Refresh while online with `python3 scripts/update_offline_flasher.py`.
 
-| File | Use |
+| Folder | Board | Chip |
+|---|---|---|
+| `meshcore-v1.18.0/xiao-nrf52840-wio-sx1262/` | **XIAO nRF52840 + Wio-SX1262 kit (the guide's default)** | nRF52840 |
+| `meshcore-v1.18.0/rak4631/` | RAK WisBlock 4631 | nRF52840 |
+| `meshcore-v1.18.0/heltec-t114/` | Heltec T114 | nRF52840 |
+| `meshcore-v1.18.0/promicro-nrf52-faketec/` | ProMicro nRF52840 "faketec" DIY | nRF52840 |
+| `meshcore-v1.18.0/xiao-esp32s3-wio-sx1262/` | XIAO ESP32S3 + Wio-SX1262 kit | ESP32-S3 |
+| `meshcore-v1.18.0/lilygo-t3s3-sx1262/` | LilyGo T3S3, SX1262 radio | ESP32-S3 |
+| `meshcore-v1.18.0/lilygo-t3s3-sx1276/` | LilyGo T3S3, SX1276 radio | ESP32-S3 |
+| `meshcore-v1.18.0/heltec-v3/`, `heltec-v4/` | Heltec V3 / V4 | ESP32-S3 |
+| `flasher-static/` | nRF52840 **erase tools** and **OTAFIX bootloaders** (by @oltaco, MIT) | nRF52840 |
+| `source/` | MeshCore source code of this release (for custom builds) | — |
+
+Each board folder holds three roles: **`companion_radio_ble`** (phone app over Bluetooth: use this for companions), **`companion_radio_usb`** (USB-only clients) and **`repeater`**.
+
+## Easiest: the offline web flasher
+
+`python3 offline-flasher/serve.py`, then open <http://localhost:8080> in Chrome or Edge. It's the same flasher as flasher.meshcore.io, running from this folder. See [offline-flasher/README.md](../offline-flasher/README.md).
+
+## nRF52840 boards with no tools at all (UF2 drag-and-drop)
+
+The bootloader on these boards shows up as a USB drive, so any computer works. No browser or software is needed.
+
+1. Antenna on. Plug in with a USB-C **data** cable.
+2. **Double-tap reset.** A drive appears (often named `XIAO-SENSE`, `RAK4631` or similar). Its `INFO_UF2.TXT` names the board and bootloader.
+3. Copy the `.uf2` you want onto the drive. It disconnects by itself when done, which is normal.
+
+| To… | Copy this `.uf2` (XIAO kit example) |
 |---|---|
-| `Xiao_nrf52_companion_radio_ble-v1.18.0-81dbae5.uf2` | **People's Companion** (Bluetooth, phone app) |
-| `Xiao_nrf52_repeater-v1.18.0-81dbae5.uf2` | **People's Repeater** |
-| `Xiao_nrf52_companion_radio_usb-v1.18.0-81dbae5.uf2` | Companion over USB only (web/CLI client, no Bluetooth). Not normally wanted. |
-| `*.zip` (same names) | DFU packages. Use with the web flasher's "Custom firmware" option or `adafruit-nrfutil`. |
-| `xiao_nrf52840_ble_bootloader-0.9.2-OTAFIX2.2.zip` | OTAFIX bootloader. Only needed for Bluetooth OTA updates later. Install it through the flasher. |
-| `Xiao_nrf52_QSPIFlash_Format-v1.2.zip` | The flasher's "erase" helper (wipes old settings). |
+| Make a **companion** | `meshcore-v1.18.0/xiao-nrf52840-wio-sx1262/Xiao_nrf52_companion_radio_ble-v1.18.0-81dbae5.uf2` |
+| Make a **repeater** | `meshcore-v1.18.0/xiao-nrf52840-wio-sx1262/Xiao_nrf52_repeater-v1.18.0-81dbae5.uf2` |
+| **Wipe** old settings (factory reset), then flash again | `flasher-static/Xiao_nrf52_QSPIFlash_Format-v1.2.uf2` (XIAO). RAK/T114/faketec: `FLASH_ERASE_nrf52_softdevice_v6.uf2` |
+| Install the **OTAFIX bootloader** (only needed for Bluetooth updates later) | `flasher-static/xiao_nrf52840_ble_bootloader-0.9.2-OTAFIX2.2.uf2`. Use the `_sense_` file only if `INFO_UF2.TXT` says Sense. Other boards have their own file. |
 
-## Offline UF2 flashing
+The `.zip` files are the same firmware as DFU packages, for the web flasher's "Custom firmware" button or `adafruit-nrfutil`.
 
-1. Antenna attached. Plug the XIAO into a computer with a USB-C **data** cable.
-2. **Double-tap** the tiny reset button. A USB drive appears.
-3. Drag the right `.uf2` onto it. The drive disconnects itself when done, which is normal.
-4. UF2 copying does not run the flasher's Erase step. On a board that already has MeshCore settings, use the online flasher's Erase first. New boards don't need it.
+## ESP32-S3 boards
 
-Newer firmware: <https://flasher.meshcore.io> always offers the latest. Refresh this folder before an event with the same file names from the newest release.
+ESP32-S3 boards have no drag-and-drop mode, so use the offline web flasher, or `esptool` if Python is available:
 
-## ESP32-S3 alternatives (`meshcore-v1.18.0-esp32s3/`)
-
-Full-flash ("merged") images from the same v1.18.0 releases, for the boards in [docs/hardware-options.md](../docs/hardware-options.md) B and C. Checksums: `meshcore-v1.18.0-esp32s3/SHA256SUMS`.
-
-| File | Board / role |
-|---|---|
-| `Xiao_S3_WIO_companion_radio_ble-…-merged.bin` | XIAO ESP32S3 + Wio-SX1262 kit, Companion (Bluetooth) |
-| `Xiao_S3_WIO_repeater-…-merged.bin` | XIAO ESP32S3 + Wio-SX1262 kit, Repeater |
-| `LilyGo_T3S3_sx1262_companion_radio_ble-…-merged.bin` / `…_repeater-…` | LilyGo T3S3 with **SX1262** radio |
-| `LilyGo_T3S3_sx1276_companion_radio_ble-…-merged.bin` / `…_repeater-…` | LilyGo T3S3 with **SX1276** radio |
-
-**Online (easiest):** <https://flasher.meshcore.io> → pick "Seeed Studio Xiao S3 WIO" or "LilyGo T3 S3 (SX126x / SX127x)" → role → Flash.
-
-**Offline:** these merged images are written at address `0x0` and replace everything on the flash:
+- `…-merged.bin` is a **full image** (wipes settings), written at `0x0`.
+- `….bin` (no `merged`) is an **app-only update** that keeps settings. The web flasher handles the address for you.
 
 ```sh
-python3 -m pip install esptool
-# Hold BOOT, tap RESET, release BOOT to enter download mode, then:
-python3 -m esptool --chip esp32s3 write_flash 0x0 Xiao_S3_WIO_repeater-v1.18.0-81dbae5-merged.bin
+python3 -m pip install esptool        # once, while online
+# hold BOOT, tap RESET, release BOOT (download mode), then:
+python3 -m esptool --chip esp32s3 write_flash 0x0 meshcore-v1.18.0/lilygo-t3s3-sx1262/LilyGo_T3S3_sx1262_repeater-v1.18.0-81dbae5-merged.bin
 ```
 
-Antenna on before power, as always.
+## Building your own (DIY ESP32 + SX1262)
+
+`source/MeshCore-companion-v1.18.0.tar.gz` is the full source of this release. Custom pin maps are a PlatformIO build ([MeshCore repo](https://github.com/meshcore-dev/MeshCore)). PlatformIO downloads its toolchains on first use, so do a test build **while you're online**.

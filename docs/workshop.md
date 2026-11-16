@@ -27,14 +27,14 @@ BFC's prepping group built **10 repeaters in one Sunday afternoon** over a barbe
 - [ ] **Pre-fix the PH2.0 pigtail polarity** for all repeaters (GUIDE R-3). It's tedious and easy to get wrong in a crowd.
 - [ ] Optional: pre-tin the BAT pads on each XIAO. These are the tiniest joints of the day.
 - [ ] Pack **one zip bag per build**: printed parts + every component + a printed copy of the Companion or Repeater build card (`handouts/`).
-- [ ] Load `firmware/` and this repo onto the flashing laptop. Everything works offline.
+- [ ] On the flashing laptop: clone this repo, run `python3 scripts/update_offline_flasher.py --apps` once while online, then test `python3 offline-flasher/serve.py` with Wi-Fi off. Everything then works offline.
 
 ## Stations
 
 1. **Welcome / intro (15 min):** what mesh is, why height matters, and the safety brief (below). Show a finished companion and repeater.
 2. **Soldering tables:** irons on stands, sponge or brass wool, fume fan or open air, safety glasses, multimeter, flux, solder, tweezers, heat shrink, and a "helper" flag.
 3. **Garden-light demolition (repeater builders):** outdoors or on a drop cloth. Glasses on. Large and small cutters, screwdriver, a bin for the junk.
-4. **Flash & configure:** a laptop with Chrome/Edge, `firmware/` copied locally, 2 USB-C data cables, and a printed sheet of the agreed preset and naming scheme (e.g. `Smith-Home`, `Rpt-OakSt-Roof`).
+4. **Flash & configure:** a laptop with Chrome/Edge running `python3 offline-flasher/serve.py`, 2 USB-C data cables, and a printed sheet of the agreed preset and naming scheme (e.g. `Smith-Home`, `Rpt-OakSt-Roof`).
 5. **Test / hand-off:** a known-good companion and phone in a "test" channel. Confirm each new radio sends and receives, and each repeater shows up in a message's path.
 
 ## Run of show (full-day version)

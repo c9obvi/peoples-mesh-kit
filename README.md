@@ -17,7 +17,9 @@ Both use **the same radio** (Seeed XIAO nRF52840 + Wio-SX1262) running **MeshCor
 | [`BOM.md`](BOM.md) · [`bom/bom.csv`](bom/bom.csv) | Exact parts, links, prices (checked 2026-11-14) |
 | `scripts/bom_calc.py` | Batch shopping list rounded to real pack sizes: `python3 scripts/bom_calc.py -c 6 -r 4` |
 | `stl/` | The 4 printable files (CC0) + checksums |
-| `firmware/` | Offline MeshCore v1.18.0: XIAO nRF52 kit, plus XIAO ESP32S3 kit and LilyGo T3S3 (MIT) |
+| `firmware/` | **Latest stable MeshCore (v1.18.0)** for 9 boards (nRF52840 + ESP32-S3), nRF erase tools, OTAFIX bootloaders, source (MIT) |
+| [`offline-flasher/`](offline-flasher/README.md) | **Run the flasher and repeater setup tool with no internet**: `python3 offline-flasher/serve.py` |
+| [`docs/meshcore-links.md`](docs/meshcore-links.md) | Every MeshCore link: flasher, config, apps, docs, releases, map |
 | [`docs/hardware-options.md`](docs/hardware-options.md) | Other radio boards: XIAO ESP32S3 kit, LilyGo T3S3/Heltec, other nRF boards, DIY, Raspberry Pi + HAT |
 | [`docs/printing.md`](docs/printing.md) | Slicer settings (designer + Bambu P1S 0.6 mm) |
 | [`docs/workshop.md`](docs/workshop.md) | How to run a weekend "build your own" session |
@@ -39,6 +41,8 @@ make bom C=10 R=5   # shopping list
 make pdf            # rebuild print/*.pdf (needs python3 + Chrome)
 make zip            # dist/peoples-mesh-kit-<commit>.zip of the committed repo
 make checksums      # verify STL and firmware files
+make offline        # run the offline flasher (http://localhost:8080)
+make refresh        # online: update flasher mirror, firmware, docs, apps
 ```
 
 ## Credits & licenses

@@ -10,10 +10,18 @@ People's Mesh Kit: licensing summary
    under Creative Commons CC0 1.0 (public domain dedication):
    https://creativecommons.org/publicdomain/zero/1.0/
 
-3. firmware/: MeshCore (https://github.com/meshcore-dev/MeshCore), MIT License,
+3. firmware/ and sources/meshcore-docs/: MeshCore (https://github.com/meshcore-dev/MeshCore), MIT License,
    Copyright (c) the MeshCore contributors. The OTAFIX bootloader is by @oltaco,
-   redistributed from https://flasher.meshcore.io/firmware/. See the upstream
-   projects for full license text.
+   redistributed from https://flasher.meshcore.io/firmware/; the QSPIFlash
+   formatter is by @recrof (MIT). See the upstream projects for full license text.
+
+5. offline-flasher/config-site/: mirror of https://config.meshcore.io
+   (meshcore-dev/config.meshcore.io, MIT License). offline-flasher/serve.py is
+   CC BY 4.0 like the rest of this repo's own code.
+
+6. Not in git, rebuilt locally by scripts/update_offline_flasher.py:
+   offline-flasher/site/ (mirror of flasher.meshcore.io; no published license)
+   and offline-extras/ (MeshCore apps by Liam Cottle; free, not open source).
 
 4. sources/transcripts/ is git-ignored: the auto-generated captions of Black
    Flag Civilian's videos stay local for reference and are not redistributed.

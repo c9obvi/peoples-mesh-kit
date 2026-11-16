@@ -37,6 +37,9 @@ The descriptions themselves are archived in `sources/youtube/`. The Printables l
 
 ## MeshCore
 
+All links: [docs/meshcore-links.md](meshcore-links.md). Offline mirrors are rebuilt by `scripts/update_offline_flasher.py`.
+
+
 - Web flasher: <https://flasher.meshcore.io>. Device "Seeed Studio Xiao nRF52 WIO"; roles Companion BLE / Companion USB / Repeater / Room Server; OTAFIX recommendation for OTA.
 - Releases: <https://github.com/meshcore-dev/MeshCore/releases> (v1.18.0, 2026-10-15), MIT
 - Radio presets: <https://api.meshcore.nz/api/v1/config> (USA 910.525/SF7/BW62.5/CR5; SoCal 927.875)

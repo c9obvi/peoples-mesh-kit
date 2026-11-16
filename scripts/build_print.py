@@ -76,8 +76,8 @@ if __name__ == "__main__":
     out_dir = sys.argv[1]
     os.makedirs(out_dir, exist_ok=True)
     jobs = {
-        "peoples-mesh-kit-guide": (["README.md", "GUIDE.md", "BOM.md", "docs/hardware-options.md", "docs/printing.md", "docs/workshop.md", "firmware/README.md", "docs/sources.md"], "People's Mesh Kit: Complete Guide", False),
-        "plain-instructions": (["GUIDE.md", "BOM.md", "docs/hardware-options.md", "docs/printing.md", "firmware/README.md"], "People's Mesh Kit: Plain Printable Instructions", True),
+        "peoples-mesh-kit-guide": (["README.md", "GUIDE.md", "BOM.md", "docs/hardware-options.md", "docs/printing.md", "docs/workshop.md", "firmware/README.md", "offline-flasher/README.md", "docs/meshcore-links.md", "docs/sources.md"], "People's Mesh Kit: Complete Guide", False),
+        "plain-instructions": (["GUIDE.md", "BOM.md", "docs/hardware-options.md", "docs/printing.md", "firmware/README.md", "offline-flasher/README.md", "docs/meshcore-links.md"], "People's Mesh Kit: Plain Printable Instructions", True),
         "handouts": (["handouts/companion-build-card.md", "handouts/repeater-build-card.md", "handouts/recipient-card.md"], "People's Mesh Kit: Handouts", False),
     }
     for name, (files, title, plain) in jobs.items():

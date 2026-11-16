@@ -41,7 +41,7 @@ All of these run **MeshCore** and talk to each other on one mesh **if they share
    Wio-SX1262     (IPEX/U.FL antenna socket)
 ```
 
-- MeshCore flasher name: **Seeed Studio Xiao nRF52 WIO**. Offline firmware: `firmware/meshcore-v1.18.0/`.
+- MeshCore flasher name: **Seeed Studio Xiao nRF52 WIO**. Offline firmware: `firmware/meshcore-v1.18.0/xiao-nrf52840-wio-sx1262/`.
 - Fits the People's Companion housing and the People's Repeater build exactly.
 - **Buy the kit, not the bare XIAO nRF52840** (a bare board has no LoRa).
 
@@ -59,7 +59,7 @@ All of these run **MeshCore** and talk to each other on one mesh **if they share
    Wio-SX1262     (same radio board as kit A)
 ```
 
-- MeshCore flasher name: **Seeed Studio Xiao S3 WIO** (Companion Bluetooth or Repeater). Offline: `firmware/meshcore-v1.18.0-esp32s3/Xiao_S3_WIO_*`.
+- MeshCore flasher name: **Seeed Studio Xiao S3 WIO** (Companion Bluetooth or Repeater). Offline: `firmware/meshcore-v1.18.0/xiao-esp32s3-wio-sx1262/`.
 - Same XIAO footprint and same Wio board as kit A, so it **should** fit the companion housing with the same wiring. Test-fit your first one.
 - **Power:** draws several times more than the nRF52840. As a companion, expect **days** per 18650 instead of ~2 weeks. **Not recommended for the solar garden-light repeater.** Use it as a plugged-in relay.
 - No antenna is listed in the box. The guide's builds use their own antennas anyway.
@@ -82,12 +82,12 @@ All of these run **MeshCore** and talk to each other on one mesh **if they share
   - It must be the **915 MHz** version (LilyGo also sells 433/868 MHz versions).
   - Find out which radio chip it has, SX1262 or SX1276. It's printed on the shield, the PCB or the box. Pick the matching flasher entry or file.
   - The **SX1280 (2.4 GHz) version won't work** with 915 MHz meshes.
-- Offline: `firmware/meshcore-v1.18.0-esp32s3/LilyGo_T3S3_sx1262_*` or `…_sx1276_*` (see firmware/README.md).
+- Offline: `firmware/meshcore-v1.18.0/lilygo-t3s3-sx1262/` or `…/lilygo-t3s3-sx1276/` (and `heltec-v3/`, `heltec-v4/`).
 - Same power note as B: great companions and plugged-in relays.
 
 ## D. Other ready-made nRF52840 + LoRa boards (low power, solar-friendly)
 
-All are listed in the MeshCore flasher with Companion and Repeater roles:
+All are listed in the MeshCore flasher with Companion and Repeater roles. Firmware for the **T114**, **RAK4631** and **faketec** is in the offline kit (`firmware/meshcore-v1.18.0/`):
 
 - Heltec **T114**, Mesh Node **T1**
 - **RAK WisBlock 4631**

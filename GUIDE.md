@@ -194,14 +194,17 @@ Southern California uses a different frequency. Ask your local mesh group (Disco
    - Repeater → **Repeater**
 5. **Enter DFU mode** when asked (double-tap the XIAO's tiny reset button if the flasher can't do it). **Erase flash** on a first install, then **Flash.** Wait for "complete."
 
-The flasher warns that the stock bootloader can't do **Bluetooth over-the-air updates**. If you ever want OTA updates, install the **OTAFIX bootloader** from the flasher's link (a copy is in `firmware/`). USB flashing works without it.
+The flasher warns that the stock bootloader can't do **Bluetooth over-the-air updates**. If you ever want OTA updates, install the **OTAFIX bootloader** from the flasher's link (copies are in `firmware/flasher-static/`). USB flashing works without it.
 
 ### Flashing (offline): no internet at the workshop
 
-`firmware/meshcore-v1.18.0/` holds the official v1.18.0 files for this board. Double-tap the XIAO's reset button and a USB drive appears. Drag the right `.uf2` onto it:
+**Option 1: the same flasher, running locally.** Run `python3 offline-flasher/serve.py`, open <http://localhost:8080> in Chrome or Edge, and follow the steps above. The repeater setup tool is at <http://localhost:8080/config/>. See [offline-flasher/README.md](offline-flasher/README.md); run the refresh once while online first.
+
+**Option 2: no software at all (nRF52840).** `firmware/meshcore-v1.18.0/xiao-nrf52840-wio-sx1262/` holds the official files. Double-tap the XIAO's reset button and a USB drive appears. Drag the right `.uf2` onto it:
 
 - Companion: `Xiao_nrf52_companion_radio_ble-v1.18.0-81dbae5.uf2`
 - Repeater: `Xiao_nrf52_repeater-v1.18.0-81dbae5.uf2`
+- Factory reset first, if the board was used before: `firmware/flasher-static/Xiao_nrf52_QSPIFlash_Format-v1.2.uf2`
 
 The drive disconnects by itself when the copy finishes. That's normal. See [firmware/README.md](firmware/README.md).
 
@@ -216,7 +219,8 @@ The drive disconnects by itself when the copy finishes. That's normal. See [firm
 ### Repeater: configure over USB (video 31:20)
 
 1. On the flasher site, open **Repeater Setup** (configure via USB) and connect.
-2. Set the **name**, optional **latitude/longitude** (it appears on public maps, so use a nearby public spot if privacy matters), the **radio preset** (F-0), and a strong **admin password.** The default is well known: change it.
+2. Set the **name**, optional **latitude/longitude** (it appears on public maps, so use a nearby public spot if privacy matters), the **radio preset** (F-0), and a strong **admin password.** The default is literally `password`: change it.
+   No setup page? The flasher's **Console** takes text commands: `set name …`, `set radio 910.525,62.5,7,5`, `password …`, `reboot` (list in [offline-flasher/README.md](offline-flasher/README.md)).
 3. Save. The repeater reboots. Reconnect once to confirm the settings stuck, then unplug USB. It keeps running on battery.
 
 ---

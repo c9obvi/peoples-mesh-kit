@@ -1,0 +1,258 @@
+[
+ {
+  "version": "v1.18.0",
+  "type": "repeater",
+  "name": "Repeater Firmware v1.18.0",
+  "notes": "Release notes: https://blog.meshcore.io/2026/10/15/release-1-18-0",
+  "files": [
+   {
+    "name": "Heltec_t114_repeater-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/repeater-v1.18.0/Heltec_t114_repeater-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "Heltec_t114_repeater-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/repeater-v1.18.0/Heltec_t114_repeater-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "Heltec_t114_without_display_repeater-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/repeater-v1.18.0/Heltec_t114_without_display_repeater-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "Heltec_t114_without_display_repeater-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/repeater-v1.18.0/Heltec_t114_without_display_repeater-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "Heltec_v3_repeater-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/repeater-v1.18.0/Heltec_v3_repeater-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "Heltec_v3_repeater-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/repeater-v1.18.0/Heltec_v3_repeater-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "heltec_v4_repeater-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/repeater-v1.18.0/heltec_v4_repeater-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "heltec_v4_repeater-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/repeater-v1.18.0/heltec_v4_repeater-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1262_repeater-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/repeater-v1.18.0/LilyGo_T3S3_sx1262_repeater-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1262_repeater-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/repeater-v1.18.0/LilyGo_T3S3_sx1262_repeater-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1276_repeater-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/repeater-v1.18.0/LilyGo_T3S3_sx1276_repeater-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1276_repeater-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/repeater-v1.18.0/LilyGo_T3S3_sx1276_repeater-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "ProMicro_repeater-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/repeater-v1.18.0/ProMicro_repeater-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "ProMicro_repeater-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/repeater-v1.18.0/ProMicro_repeater-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "RAK_4631_repeater-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/repeater-v1.18.0/RAK_4631_repeater-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "RAK_4631_repeater-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/repeater-v1.18.0/RAK_4631_repeater-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "Xiao_nrf52_repeater-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/repeater-v1.18.0/Xiao_nrf52_repeater-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "Xiao_nrf52_repeater-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/repeater-v1.18.0/Xiao_nrf52_repeater-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "Xiao_S3_WIO_repeater-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/repeater-v1.18.0/Xiao_S3_WIO_repeater-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "Xiao_S3_WIO_repeater-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/repeater-v1.18.0/Xiao_S3_WIO_repeater-v1.18.0-81dbae5.bin"
+   }
+  ]
+ },
+ {
+  "version": "v1.18.0",
+  "type": "companion",
+  "name": "Companion Firmware v1.18.0",
+  "notes": "Release notes: https://blog.meshcore.io/2026/10/15/release-1-18-0",
+  "files": [
+   {
+    "name": "Heltec_t114_companion_radio_ble-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/companion-v1.18.0/Heltec_t114_companion_radio_ble-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "Heltec_t114_companion_radio_ble-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/companion-v1.18.0/Heltec_t114_companion_radio_ble-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "Heltec_t114_companion_radio_usb-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/companion-v1.18.0/Heltec_t114_companion_radio_usb-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "Heltec_t114_companion_radio_usb-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/companion-v1.18.0/Heltec_t114_companion_radio_usb-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "Heltec_t114_without_display_companion_radio_ble-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/companion-v1.18.0/Heltec_t114_without_display_companion_radio_ble-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "Heltec_t114_without_display_companion_radio_ble-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/companion-v1.18.0/Heltec_t114_without_display_companion_radio_ble-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "Heltec_t114_without_display_companion_radio_usb-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/companion-v1.18.0/Heltec_t114_without_display_companion_radio_usb-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "Heltec_t114_without_display_companion_radio_usb-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/companion-v1.18.0/Heltec_t114_without_display_companion_radio_usb-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "Heltec_v3_companion_radio_ble-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/companion-v1.18.0/Heltec_v3_companion_radio_ble-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "Heltec_v3_companion_radio_ble-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/companion-v1.18.0/Heltec_v3_companion_radio_ble-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "Heltec_v3_companion_radio_usb-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/companion-v1.18.0/Heltec_v3_companion_radio_usb-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "Heltec_v3_companion_radio_usb-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/companion-v1.18.0/Heltec_v3_companion_radio_usb-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "heltec_v4_companion_radio_ble-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/companion-v1.18.0/heltec_v4_companion_radio_ble-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "heltec_v4_companion_radio_ble-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/companion-v1.18.0/heltec_v4_companion_radio_ble-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "heltec_v4_companion_radio_usb-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/companion-v1.18.0/heltec_v4_companion_radio_usb-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "heltec_v4_companion_radio_usb-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/companion-v1.18.0/heltec_v4_companion_radio_usb-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1262_companion_radio_ble-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/companion-v1.18.0/LilyGo_T3S3_sx1262_companion_radio_ble-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1262_companion_radio_ble-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/companion-v1.18.0/LilyGo_T3S3_sx1262_companion_radio_ble-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1262_companion_radio_usb-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/companion-v1.18.0/LilyGo_T3S3_sx1262_companion_radio_usb-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1262_companion_radio_usb-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/companion-v1.18.0/LilyGo_T3S3_sx1262_companion_radio_usb-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1276_companion_radio_ble-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/companion-v1.18.0/LilyGo_T3S3_sx1276_companion_radio_ble-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1276_companion_radio_ble-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/companion-v1.18.0/LilyGo_T3S3_sx1276_companion_radio_ble-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1276_companion_radio_usb-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/companion-v1.18.0/LilyGo_T3S3_sx1276_companion_radio_usb-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "LilyGo_T3S3_sx1276_companion_radio_usb-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/companion-v1.18.0/LilyGo_T3S3_sx1276_companion_radio_usb-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "ProMicro_companion_radio_ble-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/companion-v1.18.0/ProMicro_companion_radio_ble-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "ProMicro_companion_radio_ble-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/companion-v1.18.0/ProMicro_companion_radio_ble-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "ProMicro_companion_radio_usb-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/companion-v1.18.0/ProMicro_companion_radio_usb-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "ProMicro_companion_radio_usb-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/companion-v1.18.0/ProMicro_companion_radio_usb-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "RAK_4631_companion_radio_ble-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/companion-v1.18.0/RAK_4631_companion_radio_ble-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "RAK_4631_companion_radio_ble-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/companion-v1.18.0/RAK_4631_companion_radio_ble-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "RAK_4631_companion_radio_usb-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/companion-v1.18.0/RAK_4631_companion_radio_usb-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "RAK_4631_companion_radio_usb-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/companion-v1.18.0/RAK_4631_companion_radio_usb-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "Xiao_nrf52_companion_radio_ble-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/companion-v1.18.0/Xiao_nrf52_companion_radio_ble-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "Xiao_nrf52_companion_radio_ble-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/companion-v1.18.0/Xiao_nrf52_companion_radio_ble-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "Xiao_nrf52_companion_radio_usb-v1.18.0-81dbae5.uf2",
+    "url": "/releases/download/companion-v1.18.0/Xiao_nrf52_companion_radio_usb-v1.18.0-81dbae5.uf2"
+   },
+   {
+    "name": "Xiao_nrf52_companion_radio_usb-v1.18.0-81dbae5.zip",
+    "url": "/releases/download/companion-v1.18.0/Xiao_nrf52_companion_radio_usb-v1.18.0-81dbae5.zip"
+   },
+   {
+    "name": "Xiao_S3_WIO_companion_radio_ble-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/companion-v1.18.0/Xiao_S3_WIO_companion_radio_ble-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "Xiao_S3_WIO_companion_radio_ble-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/companion-v1.18.0/Xiao_S3_WIO_companion_radio_ble-v1.18.0-81dbae5.bin"
+   },
+   {
+    "name": "Xiao_S3_WIO_companion_radio_usb-v1.18.0-81dbae5-merged.bin",
+    "url": "/releases/download/companion-v1.18.0/Xiao_S3_WIO_companion_radio_usb-v1.18.0-81dbae5-merged.bin"
+   },
+   {
+    "name": "Xiao_S3_WIO_companion_radio_usb-v1.18.0-81dbae5.bin",
+    "url": "/releases/download/companion-v1.18.0/Xiao_S3_WIO_companion_radio_usb-v1.18.0-81dbae5.bin"
+   }
+  ]
+ }
+]
