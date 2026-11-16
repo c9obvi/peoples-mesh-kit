@@ -15,7 +15,7 @@ The script rounds each line up to the real pack sizes (8-pack holders, 10-pack s
 
 | Part | Per radio | Price | Where |
 |---|---|---|---|
-| Seeed Studio **XIAO nRF52840 & Wio-SX1262 Kit** | 1 | $13.49 | [Seeed](https://www.seeedstudio.com/XIAO-nRF52840-Wio-SX1262-Kit-for-Meshtastic-p-6400.html) |
+| Seeed Studio **XIAO nRF52840 & Wio-SX1262 Kit** (the kit, not the bare XIAO, which has no LoRa) | 1 | $13.49 | [Seeed](https://www.seeedstudio.com/XIAO-nRF52840-Wio-SX1262-Kit-for-Meshtastic-p-6400.html) · backups below |
 | Solder + flux | batch | ~$12 | any |
 
 ## People's Companion: per unit ≈ $31 (≈ $27 at 10-pack antenna pricing)
@@ -49,6 +49,23 @@ The script rounds each line up to the real pack sizes (8-pack holders, 10-pack s
 The light **includes an 18650.** Upgrades must be **button-top**. The EVE 25P listing (C5) isn't labeled button-top (likely flat-top), so keep it for companions unless you confirm otherwise.
 
 **Printed hub & mount** are also sold ready-made: $14.99, 4 for $53.99, or 10 for $119.99 ([store](https://blackflagcivilian.bigcartel.com/product/3d-printed-peoples-repeater-hub-mount)).
+
+## Backup sources
+
+If a primary link is out of stock. Prices are from the dates shown; check live.
+
+| Part | Primary | Backups |
+|---|---|---|
+| **Radio kit: XIAO nRF52840 + Wio-SX1262** (C1/R2) | [Seeed $13.49](https://www.seeedstudio.com/XIAO-nRF52840-Wio-SX1262-Kit-for-Meshtastic-p-6400.html) | [AliExpress "2 PCS" = 2 kits for $23.02 + $6.55 ship](https://www.aliexpress.us/item/3256808574469954.html) (Seeedstudio AI Hardware Store, 4.8★, 2026-11-15) · [DigiKey 102010710, $13.75](https://www.digikey.com/en/products/result?keywords=102010710) (backordered, 4-wk lead) |
+| **Radio kit, ESP32-S3 alternative** (companions and plugged-in relays only) | [DigiKey 102010611, XIAO ESP32S3 + Wio-SX1262, $10.90, 228 in stock](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/102010611/25835813) | Any board in [docs/hardware-options.md](docs/hardware-options.md) (LilyGo T3S3, Heltec V3/V4) |
+| Companion antenna + 10 cm cable (C2) | [BFC store](https://blackflagcivilian.bigcartel.com/product/bfc-915-mhz-lora-antenna) | [Tenmory 2-pack](https://www.amazon.com/dp/B0CTXL61LY) (15 cm cable, so the companion fit is untested) · search "915MHz SMA antenna" + "IPEX to SMA female 10cm" |
+| 18650 cells (C5, R9, R10) | [18650 Battery Store](https://www.18650batterystore.com/collections/eve-18650-batteries) | [IMR Batteries: Samsung 35E button top](https://www.imrbatteries.com/samsung-35e-18650-3500mah-8a-battery-button-top) · [IMR Batteries: EVE](https://imrbatteries.com/collections/eve-18650-batteries). Avoid no-name "9900 mAh" cells. |
+| Harbor Breeze light (R1) | [Lowe's](https://www.lowes.com/pd/Harbor-Breeze-60-Lumens-1-Watt-Black-Warm-White-Solar-LED-Spot-light/5018244381) | [Instacart same-day from Lowe's](https://www.instacart.com/products/57741133?retailerSlug=lowes-home-improvement) · [DealNews price tracker (TS1859)](https://www.dealnews.com/products/Harbor-Breeze/Harbor-Breeze-1-Watt-60-Lumen-Solar-LED-Spot-Light/498670.html). No substitute light: the hub is shaped for this one. |
+| 1/4" × 5/8" bonded washer (R6) | [Lowe's, Hillman 75-ct](https://www.lowes.com/pd/Hillman-75-Count-1-4-in-x-5-8-in-Neoprene-Bonded-Sealing-Washer/3036264) | [Ace Hardware, Hillman 100-pk](https://www.acehardware.com/p/5322219) · any hardware store's 1/4" bonded sealing washer |
+| CN3065 charger (R3) | [Amazon HiLetgo 2-pack](https://www.amazon.com/dp/B082F7X8WS) | Search "CN3065 solar lipo charger" (needs SOLAR / BAT / SYS OUT PH2.0 sockets) |
+| PH2.0 pigtails (R5) | [Amazon 15 pairs](https://www.amazon.com/dp/B088NFRNZ2) | Search "JST PH2.0 2 pin pigtail 100mm". Check polarity. |
+| 18650 holder, rocker switch (C3, C4) | [Holder](https://www.amazon.com/dp/B07KD9JLH3) · [Switch](https://www.amazon.com/dp/B079JC8HKH) | Search "18650 battery holder with leads" / "10x15mm mini rocker switch SPST" |
+| Printed parts (C6, R7) | Print from `stl/` | [BFC housing](https://blackflagcivilian.bigcartel.com/product/the-peoples-companion-housing-only) · [BFC hub + mount](https://blackflagcivilian.bigcartel.com/product/3d-printed-peoples-repeater-hub-mount) · [BFC builder kit](https://blackflagcivilian.bigcartel.com/product/the-peoples-companion-mesh-radio-builder-kit) |
 
 ## Tools
 

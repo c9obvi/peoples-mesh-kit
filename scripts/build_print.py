@@ -34,6 +34,18 @@ li { margin: 0.15em 0; }
 """
 
 
+PLAIN_CSS = """
+body { font: 11pt/1.45 Georgia, "Times New Roman", serif; color: #000; }
+h1, h2, h3 { font-family: Arial, sans-serif; color: #000; }
+img, p > em:only-child { display: none; }
+blockquote { border-left: 3px solid #000; background: none; }
+th { background: #ddd; }
+a { color: #000; text-decoration: none; }
+a[href^="http"]::after { content: " <" attr(href) ">"; font-size: 8pt; word-break: break-all; }
+td a[href^="http"]::after { font-size: 7pt; }
+"""
+
+
 def inline_images(html, base_dir):
     def repl(m):
         src = m.group(1)
@@ -46,7 +58,7 @@ def inline_images(html, base_dir):
     return re.sub(r'src="([^"]+)"', repl, html)
 
 
-def render(md_paths, title):
+def render(md_paths, title, plain=False):
     parts = []
     for i, rel in enumerate(md_paths):
         path = os.path.join(ROOT, rel)
@@ -54,19 +66,21 @@ def render(md_paths, title):
         text = re.sub(r"^- \[ \] ", "- ☐ ", text, flags=re.M)
         text = re.sub(r"^- \[x\] ", "- ☑ ", text, flags=re.M)
         body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists", "toc"])
-        body = inline_images(body, os.path.dirname(path))
+        body = re.sub(r"<img[^>]*>", "", body) if plain else inline_images(body, os.path.dirname(path))
         parts.append(('<div class="page-break"></div>' if i else "") + body)
-    return f"<!doctype html><html><head><meta charset='utf-8'><title>{title}</title><style>{CSS}</style></head><body>{''.join(parts)}</body></html>"
+    extra = PLAIN_CSS if plain else ""
+    return f"<!doctype html><html><head><meta charset='utf-8'><title>{title}</title><style>{CSS}{extra}</style></head><body>{''.join(parts)}</body></html>"
 
 
 if __name__ == "__main__":
     out_dir = sys.argv[1]
     os.makedirs(out_dir, exist_ok=True)
     jobs = {
-        "peoples-mesh-kit-guide": (["README.md", "GUIDE.md", "BOM.md", "docs/printing.md", "docs/workshop.md", "firmware/README.md", "docs/sources.md"], "People's Mesh Kit: Complete Guide"),
-        "handouts": (["handouts/companion-build-card.md", "handouts/repeater-build-card.md", "handouts/recipient-card.md"], "People's Mesh Kit: Handouts"),
+        "peoples-mesh-kit-guide": (["README.md", "GUIDE.md", "BOM.md", "docs/hardware-options.md", "docs/printing.md", "docs/workshop.md", "firmware/README.md", "docs/sources.md"], "People's Mesh Kit: Complete Guide", False),
+        "plain-instructions": (["GUIDE.md", "BOM.md", "docs/hardware-options.md", "docs/printing.md", "firmware/README.md"], "People's Mesh Kit: Plain Printable Instructions", True),
+        "handouts": (["handouts/companion-build-card.md", "handouts/repeater-build-card.md", "handouts/recipient-card.md"], "People's Mesh Kit: Handouts", False),
     }
-    for name, (files, title) in jobs.items():
+    for name, (files, title, plain) in jobs.items():
         with open(os.path.join(out_dir, name + ".html"), "w", encoding="utf-8") as f:
-            f.write(render(files, title))
+            f.write(render(files, title, plain))
         print(os.path.join(out_dir, name + ".html"))

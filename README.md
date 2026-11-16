@@ -17,12 +17,13 @@ Both use **the same radio** (Seeed XIAO nRF52840 + Wio-SX1262) running **MeshCor
 | [`BOM.md`](BOM.md) · [`bom/bom.csv`](bom/bom.csv) | Exact parts, links, prices (checked 2026-11-14) |
 | `scripts/bom_calc.py` | Batch shopping list rounded to real pack sizes: `python3 scripts/bom_calc.py -c 6 -r 4` |
 | `stl/` | The 4 printable files (CC0) + checksums |
-| `firmware/` | Offline MeshCore v1.18.0 for this board (MIT) |
+| `firmware/` | Offline MeshCore v1.18.0: XIAO nRF52 kit, plus XIAO ESP32S3 kit and LilyGo T3S3 (MIT) |
+| [`docs/hardware-options.md`](docs/hardware-options.md) | Other radio boards: XIAO ESP32S3 kit, LilyGo T3S3/Heltec, other nRF boards, DIY, Raspberry Pi + HAT |
 | [`docs/printing.md`](docs/printing.md) | Slicer settings (designer + Bambu P1S 0.6 mm) |
 | [`docs/workshop.md`](docs/workshop.md) | How to run a weekend "build your own" session |
 | `handouts/` | One-page build cards + a card for gift recipients |
-| `print/` | **PDFs** of the whole guide and the handouts, ready to print |
-| `sources/` | Archived Printables listing text |
+| `print/` | **PDFs**: full illustrated guide, **plain black-and-white instructions** (URLs printed out), handouts |
+| `sources/` | Everything the videos point to: video descriptions, Printables listing text, BFC store pages |
 
 ## Quick start
 

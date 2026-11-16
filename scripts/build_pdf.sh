@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build print/peoples-mesh-kit-guide.pdf and print/handouts.pdf.
+# Build print/peoples-mesh-kit-guide.pdf, print/plain-instructions.pdf and print/handouts.pdf.
 # Needs python3 and Google Chrome (or Chromium); set CHROME=/path/to/chrome to override.
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -17,7 +17,7 @@ fi
 [ -n "$CHROME" ] || { echo "Chrome/Chromium not found; set CHROME=..." >&2; exit 1; }
 mkdir -p print
 "$VENV/bin/python" scripts/build_print.py .build/html
-for name in peoples-mesh-kit-guide handouts; do
+for name in peoples-mesh-kit-guide plain-instructions handouts; do
   "$CHROME" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="print/$name.pdf" "file://$PWD/.build/html/$name.html" 2>/dev/null
   echo "print/$name.pdf"
 done

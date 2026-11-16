@@ -19,3 +19,26 @@ Official **MeshCore v1.18.0** builds for **Seeed Studio XIAO nRF52840 + Wio-SX12
 4. UF2 copying does not run the flasher's Erase step. On a board that already has MeshCore settings, use the online flasher's Erase first. New boards don't need it.
 
 Newer firmware: <https://flasher.meshcore.io> always offers the latest. Refresh this folder before an event with the same file names from the newest release.
+
+## ESP32-S3 alternatives (`meshcore-v1.18.0-esp32s3/`)
+
+Full-flash ("merged") images from the same v1.18.0 releases, for the boards in [docs/hardware-options.md](../docs/hardware-options.md) B and C. Checksums: `meshcore-v1.18.0-esp32s3/SHA256SUMS`.
+
+| File | Board / role |
+|---|---|
+| `Xiao_S3_WIO_companion_radio_ble-…-merged.bin` | XIAO ESP32S3 + Wio-SX1262 kit, Companion (Bluetooth) |
+| `Xiao_S3_WIO_repeater-…-merged.bin` | XIAO ESP32S3 + Wio-SX1262 kit, Repeater |
+| `LilyGo_T3S3_sx1262_companion_radio_ble-…-merged.bin` / `…_repeater-…` | LilyGo T3S3 with **SX1262** radio |
+| `LilyGo_T3S3_sx1276_companion_radio_ble-…-merged.bin` / `…_repeater-…` | LilyGo T3S3 with **SX1276** radio |
+
+**Online (easiest):** <https://flasher.meshcore.io> → pick "Seeed Studio Xiao S3 WIO" or "LilyGo T3 S3 (SX126x / SX127x)" → role → Flash.
+
+**Offline:** these merged images are written at address `0x0` and replace everything on the flash:
+
+```sh
+python3 -m pip install esptool
+# Hold BOOT, tap RESET, release BOOT to enter download mode, then:
+python3 -m esptool --chip esp32s3 write_flash 0x0 Xiao_S3_WIO_repeater-v1.18.0-81dbae5-merged.bin
+```
+
+Antenna on before power, as always.

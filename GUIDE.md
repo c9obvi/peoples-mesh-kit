@@ -39,6 +39,8 @@ Your hunch is **half right.** The radio is identical. The rest of the build is n
 | Donor parts | none | **Harbor Breeze solar spot light (Lowe's)** |
 | Set up with | Phone app (MeshCore) over Bluetooth | Web flasher's Repeater Setup over USB |
 
+**Other boards** (XIAO ESP32S3 kit, LilyGo T3S3, Heltec, Raspberry Pi + HAT, DIY) are covered in [docs/hardware-options.md](docs/hardware-options.md). All of them join the same MeshCore mesh, but only the nRF52840 is frugal enough for the small solar repeater.
+
 In theory any kit can be flashed as either role. In practice the housing and power wiring decide what each unit is. Flash the role that matches the build.
 
 > **About the repeater video's audio:** the auto-captions say "Meshtastic" at 31:00–33:40. The steps shown there are MeshCore repeater steps: admin password, login, telemetry, hop path, and the 910.525 MHz preset. Both of BFC's designs also run Meshtastic. This guide uses **MeshCore for both radios** so a companion and a repeater from the same session talk to each other. Use what your neighborhood uses (see F-0).

@@ -8,6 +8,15 @@ Everything here was collected 2026-11-14 straight from the designer's links.
 - **People's Repeater**: <https://youtu.be/yAmINEghCOc> (38:43). Overview 2:00, range test 5:30–11:00, water test 11:30–15:30, **build 15:35**: R-2 16:05, R-3 17:20, R-4 18:40, R-5 21:00, R-6 22:10, R-7 23:50, R-8 25:10, R-9 27:00, R-10 28:50, R-11 30:20, R-12 31:20, R-13 33:40.
 - Auto-generated transcripts are kept locally in `sources/transcripts/` and git-ignored, since they are the creator's words (YouTube ASR, so expect errors: "Mesh Central" = MeshCore, "Laura" = LoRa, and in the repeater video "Meshtastic" is said where MeshCore steps are shown).
 
+## What the videos point to (all archived)
+
+The video descriptions contain **no separate written guide**. They link to:
+1. **Printables** (STLs + text instructions + parts list): archived in `sources/printables/`, files in `stl/`
+2. **BFC web store** (builder kit contents, prices): archived in `sources/store/`
+3. SubscribeStar (support/Discord)
+
+The descriptions themselves are archived in `sources/youtube/`. The Printables listings have no other files (no G-code, PDFs or extra downloads). The repeater listing also has v1.0 STLs, which are superseded by v1.1.
+
 ## Printables (CC0 / public domain)
 
 - Companion: <https://www.printables.com/model/1832924> → `stl/companion/`, listing text in `sources/printables/companion-printables-1832924.md`
@@ -19,6 +28,12 @@ Everything here was collected 2026-11-14 straight from the designer's links.
 - BFC store: <https://blackflagcivilian.bigcartel.com> (builder kit, housings, hubs, antennas)
 - Amazon short links resolved: `a.co/d/08OOc4oh` → B07KD9JLH3 (18650 holder) · `a.co/d/0eyPYsYW` → B079JC8HKH (rocker) · `a.co/d/04KqRpTD` → B082F7X8WS (CN3065) · `a.co/d/05SnUmph` → B0CTXL61LY (antenna + bulkhead) · `a.co/d/048UcKC9` → B088NFRNZ2 (PH2.0 pigtails)
 - Couldn't load automatically (bot-blocked): Lowe's (light, washer) and 18650batterystore.com (cells). Those prices are marked *verify* in `bom/bom.csv`.
+
+## Alternate hardware (checked 2026-11-15)
+
+- AliExpress kit 2-pack: <https://www.aliexpress.us/item/3256808574469954.html> (from a page saved by the user, since automated access redirects to login)
+- DigiKey 102010611 (ESP32S3 kit) / 102010710 (nRF52840 kit): see docs/hardware-options.md
+- openHop / pyMC Pi repeater: <https://areyoumeshingwith.us/docs/meshcore/installation/>, <https://pypi.org/project/pymc-core/>
 
 ## MeshCore
 
