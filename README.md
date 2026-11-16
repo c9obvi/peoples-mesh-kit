@@ -3,7 +3,7 @@
 **Build cheap, encrypted, off-grid text-messaging radios with your neighbors.** This repo packages Black Flag Civilian's two open designs into one guide that you can repeat, print, and use offline:
 
 - **People's Companion** (about $25–31): the pocket radio. It pairs with your phone over Bluetooth and runs about 2 weeks on a swappable 18650. [Video](https://youtu.be/RTBM0CscnLI)
-- **People's Repeater** (about $35–40): a solar node built from a $10 Lowe's garden light and a 3D-printed hub. Mount it high and it relays everyone's messages. [Video](https://youtu.be/yAmINEghCOc)
+- **People's Repeater** (about $36–41): a solar node built from a $10 Lowe's garden light and a 3D-printed hub. Mount it high and it relays everyone's messages. [Video](https://youtu.be/yAmINEghCOc)
 
 Both use **the same radio** (Seeed XIAO nRF52840 + Wio-SX1262) running **MeshCore** firmware. The *role* differs (Companion vs Repeater), and so do the housing and power wiring. See [GUIDE Part 0](GUIDE.md#part-0-same-radio-different-firmware).
 

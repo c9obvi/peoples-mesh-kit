@@ -10,7 +10,7 @@
 | Power | One swappable 18650 cell, about 2 weeks per charge | Garden-light solar panel + 18650, charges itself |
 | Weather | **Not waterproof.** Keep it dry. | Weather-resistant (ASA hub, O-ring) |
 | Build time | 15–45 min | 30–60 min |
-| Parts cost | about $25–31 | about $35–40 |
+| Parts cost | about $25–31 | about $36–41 |
 
 Contents: [Part 0: Same radio, different firmware](#part-0-same-radio-different-firmware) · [Part 1: Print](#part-1-print-the-parts) · [Part 2: Shared prep](#part-2-shared-prep-every-radio) · [Part C: Build the Companion](#part-c-build-the-peoples-companion) · [Part R: Build the Repeater](#part-r-build-the-peoples-repeater) · [Part F: Flash & configure](#part-f-flash--configure-meshcore) · [Part T: Test, deploy, troubleshoot](#part-t-test-deploy-troubleshoot)
 

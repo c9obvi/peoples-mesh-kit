@@ -26,17 +26,17 @@ The script rounds each line up to the real pack sizes (8-pack holders, 10-pack s
 | C2 | BFC 915 MHz whip (SMA male) **+ 10 cm SMA-to-IPEX cable** | 1 | $9 · 4 for $32 · 10 for $70 | [BFC store](https://blackflagcivilian.bigcartel.com/product/bfc-915-mhz-lora-antenna) |
 | C3 | 18650 holder with wire leads (Art&Beauty) | 1 | $6.69 / 8 → $0.84 | [Amazon B07KD9JLH3](https://www.amazon.com/dp/B07KD9JLH3) |
 | C4 | Mini 10×15 mm SPST rocker switch | 1 | $5.98 / 10 → $0.60 | [Amazon B079JC8HKH](https://www.amazon.com/dp/B079JC8HKH) |
-| C5 | 18650 cell: EVE 25P 2500 mAh (designer's pick) | 1 | ~$1.85–5.99 *verify* | [18650 Battery Store](https://www.18650batterystore.com/products/eve-18650-25p) |
+| C5 | 18650 cell: EVE 25P 2500 mAh (designer's pick) | 1 | $1.85–5.99, often sold out | [18650 Battery Store](https://www.18650batterystore.com/products/eve-18650-25p) |
 | C6 | Printed Enclosure + Cap, PETG (≤ 49 g) | 1 set | ~$1 filament | `stl/companion/` |
 | C7 | Heat shrink (optional) | batch | ~$7 | any |
 
 **Shortcut:** BFC sells a **Companion Builder Kit** (everything except the 18650) for $37.99, 2 for $71.99, or 4 for $135.99, in 8 colors: [store](https://blackflagcivilian.bigcartel.com/product/the-peoples-companion-mesh-radio-builder-kit). The printed housing alone is $11.99, 4 for $39.99, or 10 for $89.99.
 
-## People's Repeater: per unit ≈ $36
+## People's Repeater: per unit ≈ $36–41 (light on sale vs. regular)
 
 | ID | Part | Qty | Pack price → per unit | Where |
 |---|---|---|---|---|
-| R1 | **Harbor Breeze 60 lm 1 W black solar LED spot light** | 1 | ~$9.98 sale / $15 reg. *verify* | [Lowe's](https://www.lowes.com/pd/Harbor-Breeze-60-Lumens-1-Watt-Black-Warm-White-Solar-LED-Spot-light/5018244381) |
+| R1 | **Harbor Breeze 60 lm 1 W black solar LED spot light** | 1 | $14.98 reg. (often $9.98 on sale) | [Lowe's](https://www.lowes.com/pd/Harbor-Breeze-60-Lumens-1-Watt-Black-Warm-White-Solar-LED-Spot-light/5018244381) |
 | R2 | XIAO nRF52840 & Wio-SX1262 Kit | 1 | $13.49 | [Seeed](https://www.seeedstudio.com/XIAO-nRF52840-Wio-SX1262-Kit-for-Meshtastic-p-6400.html) |
 | R3 | HiLetgo **CN3065** mini solar charger board | 1 | $6.49 / 2 → $3.25 | [Amazon B082F7X8WS](https://www.amazon.com/dp/B082F7X8WS) |
 | R4 | Tenmory 915 MHz 3 dBi antenna + 15 cm U.FL→SMA bulkhead | 1 | $11.99 / 2 → $6.00 | [Amazon B0CTXL61LY](https://www.amazon.com/dp/B0CTXL61LY) |
@@ -77,7 +77,7 @@ The light **includes an 18650.** Upgrades must be **button-top**. The EVE 25P li
 | C4 | Mini 10x15 mm 2-pin SPST on/off rocker switch (10-pack) | 6 | 1 x 10-pack | $5.98 | 2026-11-14 | [Amazon (ASIN B079JC8HKH)](https://www.amazon.com/dp/B079JC8HKH) |
 | C5 | EVE 25P 18650 2500 mAh cell | 6 | 6 x single | $35.94 | verify | [18650 Battery Store](https://www.18650batterystore.com/products/eve-18650-25p) |
 | C6 | People's Companion housing: Enclosure + Cap (PETG, ~49 g max) | 6 | 6 x single | $6.00 | estimate | [Print it yourself (stl/companion)](https://www.printables.com/model/1832924) |
-| R1 | Harbor Breeze 60-lumen 1 W black solar LED spot light (Lowe's) | 4 | 4 x single | $39.92 | verify | [Lowe's](https://www.lowes.com/pd/Harbor-Breeze-60-Lumens-1-Watt-Black-Warm-White-Solar-LED-Spot-light/5018244381) |
+| R1 | Harbor Breeze 60-lumen 1 W black solar LED spot light (Lowe's) | 4 | 4 x single | $59.92 | 2026-11-14 (search) | [Lowe's](https://www.lowes.com/pd/Harbor-Breeze-60-Lumens-1-Watt-Black-Warm-White-Solar-LED-Spot-light/5018244381) |
 | R2 | Seeed Studio XIAO nRF52840 & Wio-SX1262 Kit for Meshtastic | 4 | 4 x single | $53.96 | 2026-11-14 | [Seeed Studio](https://www.seeedstudio.com/XIAO-nRF52840-Wio-SX1262-Kit-for-Meshtastic-p-6400.html) |
 | R3 | HiLetgo CN3065 mini solar LiPo charger board (2-pack) | 4 | 2 x 2-pack | $12.98 | 2026-11-14 | [Amazon (ASIN B082F7X8WS)](https://www.amazon.com/dp/B082F7X8WS) |
 | R4 | Tenmory 915 MHz 3 dBi SMA antenna + 15 cm U.FL-to-SMA-female bulkhead cable (2-pack) | 4 | 2 x 2-pack | $23.98 | 2026-11-14 | [Amazon (ASIN B0CTXL61LY)](https://www.amazon.com/dp/B0CTXL61LY) |
@@ -88,4 +88,4 @@ The light **includes an 18650.** Upgrades must be **button-top**. The EVE 25P li
 | S1 | Rosin-core solder (thin, 0.6–0.8 mm) + flux pen | 1 | 1 x single | $12.00 | estimate | Any |
 | S2 | Small piece of electrical or Kapton tape | 1 | 1 x single | $4.00 | estimate | Any |
 
-**Estimated total: $362.38** plus shipping and tax. Rows marked `verify` or `estimate` need a live price check.
+**Estimated total: $382.38** plus shipping and tax. Rows marked `verify` or `estimate` need a live price check.
