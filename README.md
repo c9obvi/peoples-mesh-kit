@@ -26,6 +26,7 @@ Both use **the same radio** (Seeed XIAO nRF52840 + Wio-SX1262) running **MeshCor
 | `handouts/` | One-page build cards + a card for gift recipients |
 | `print/` | **PDFs**: full illustrated guide, **plain black-and-white instructions** (URLs printed out), handouts |
 | `sources/` | Everything the videos point to: video descriptions, Printables listing text, BFC store pages |
+| [`maps/san-diego-tijuana/`](maps/san-diego-tijuana/README.md) | Printable San Diego–Tijuana topographic maps |
 
 ## Quick start
 
@@ -33,6 +34,10 @@ Both use **the same radio** (Seeed XIAO nRF52840 + Wio-SX1262) running **MeshCor
 2. Order parts: `make bom C=6 R=4`. Order the Seeed kits first, since they ship from overseas.
 3. Print: companion in PETG, repeater hub + mount in ASA. Test-fit one set first.
 4. Build with the guide (or a build card) next to you, and the video open at the listed timestamp.
+
+## Offline maps
+
+The [San Diego–Tijuana map set](maps/san-diego-tijuana/README.md) has 26 printable topographic sheets at 1:25,000. Download both PDFs before heading offline. Print on US Letter at **Actual Size (100%)**.
 
 ## Make targets
 
